@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Mohammad ali Sakib",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "img": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRvY3RvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "fee": 3000,
+    "available": "Night Shift (8pm-10pm)"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Jahid Hasan",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGRvY3RvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "fee": 3000,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Nusrat Faria",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://images.unsplash.com/photo-1585842378054-ee2e52f94ba2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fGRvY3RvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "fee": 3000,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Sabnur Rahman",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://c4.wallpaperflare.com/wallpaper/344/655/634/sweet-girl-pic-3840x2160-wallpaper-preview.jpg",
+    "fee": 3000,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Ruthila Rahman",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGRvY3RvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "fee": 3000,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Parves Sarowar",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://images.unsplash.com/photo-1618498082410-b4aa22193b38?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGRvY3RvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "fee": 3000,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 6,
+    "name": "Dr. Kumar Debhnath",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGRvY3RvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "fee": 4500,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Rumki Choydhurry",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://c4.wallpaperflare.com/wallpaper/80/148/941/hot-girl-pic-1920x1200-wallpaper-preview.jpg",
+    "fee": 4500,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 8,
+    "name": "Dr. Sonayna Monalisa",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://c4.wallpaperflare.com/wallpaper/571/393/115/hot-girl-image-1920x1200-wallpaper-thumb.jpg",
+    "fee": 4787,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 9,
+    "name": "Dr. Sonayna Monalisa",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://c4.wallpaperflare.com/wallpaper/571/393/115/hot-girl-image-1920x1200-wallpaper-thumb.jpg",
+    "fee": 4787,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 10,
+    "name": "Dr. Sonayna Monalisa",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://c4.wallpaperflare.com/wallpaper/307/376/52/pic-girl-1920x1200-wallpaper-thumb.jpg",
+    "fee": 4787,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 11,
+    "name": "Dr. Sonayna Monalisa",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://c4.wallpaperflare.com/wallpaper/571/393/115/hot-girl-image-1920x1200-wallpaper-thumb.jpg",
+    "fee": 4787,
+    "available": "Night Shift (8pm-9pm)"
+  },
+  {
+    "id": 12,
+    "name": "Dr. Sonayna Monalisa",
+    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
+    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
+    "img": "https://c4.wallpaperflare.com/wallpaper/200/724/924/hot-girl-pic-1920x1200-wallpaper-thumb.jpg",
+    "fee": 4787,
+    "available": "Night Shift (8pm-9pm)"
+  }
+]

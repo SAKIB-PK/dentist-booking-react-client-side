@@ -24,8 +24,8 @@ const Navbar = () => {
                 </ul>
                 <ul className="navbar-nav me-2 mb-2 mb-lg-0">
                     {user?.email? <>
-                        <span className='text-white px-3'>{user.displayName}</span>
-                        <button onClick={()=> logOut()}>Log out</button>
+                        <span className='text-white px-3 pt-2'>{user.displayName}</span>
+                        <button className='btn btn-light fw-bold' onClick={()=> logOut()}>Log out</button>
                         </>
                      :<>
                         <li className="nav-item">

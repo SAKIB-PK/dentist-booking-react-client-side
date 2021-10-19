@@ -1,7 +1,12 @@
 import React from 'react'
+import useServices from '../../hooks/useServices'
+import Service from '../Service/Service'
 import './Home.css'
 
 const Home = () => {
+    const post = useServices()
+
+    console.log(post)
     return (
         <>
             <div className="container">
@@ -14,6 +19,15 @@ const Home = () => {
                     <div className="col-12 col-md-6">
                         <img src="/images/doctor.svg" className="img-fluid rounded" alt=""/>
                     </div>
+                </div>
+                {/* Services section  */}
+                <div className="row">
+                    <h2 className="border-bottom font-monospace fst-italic fw-bold my-5 text-center text-muted text-uppercase">services</h2>
+                </div>
+                <div className="row g-5">
+                    {
+                        post.slice(0,6).map(item => <Service key={item.id} item ={item}/>)
+                    }
                 </div>
             </div>
         </>
