@@ -6,7 +6,6 @@ import './Home.css'
 const Home = () => {
     const post = useServices()
 
-    console.log(post)
     return (
         <>
             <div className="container">

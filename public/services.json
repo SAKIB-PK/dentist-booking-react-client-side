@@ -37,15 +37,6 @@
   },
   {
     "id": 5,
-    "name": "Dr. Ruthila Rahman",
-    "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
-    "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
-    "img": "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGRvY3RvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-    "fee": 3000,
-    "available": "Night Shift (8pm-9pm)"
-  },
-  {
-    "id": 5,
     "name": "Dr. Parves Sarowar",
     "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
     "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
@@ -100,11 +91,11 @@
   },
   {
     "id": 11,
-    "name": "Dr. Sonayna Monalisa",
+    "name": "Dr. Ruthila Rahman",
     "speciallist": "Dental, Oral & Maxillofacial Surgery Specialist",
     "description": "Prof. Dr. Nasir Uddin obtained Master of Surgery  in Oral and Maxillofacial Surgery from University of Dhaka, Bangladesh in 2010. He completed Bachelor of Dental Surgery (BDS) course from Dhaka Dental College in 1985.",
-    "img": "https://c4.wallpaperflare.com/wallpaper/571/393/115/hot-girl-image-1920x1200-wallpaper-thumb.jpg",
-    "fee": 4787,
+    "img": "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGRvY3RvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "fee": 3000,
     "available": "Night Shift (8pm-9pm)"
   },
   {

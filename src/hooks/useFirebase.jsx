@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { useEffect, useState } from "react";
+import { useHistory } from 'react-router';
 import FirebaseAuthInitialize from '../firebase/firebase.init';
 
 
@@ -14,6 +15,7 @@ const useFirebase=()=>{
     const [img,setImg] = useState('')
     const GoogleProvider = new GoogleAuthProvider();
     const auth = getAuth()
+    const history = useHistory()
 
     // state memorize user database
     useEffect(() => {
@@ -23,17 +25,13 @@ const useFirebase=()=>{
 
     // create user with email and password
     const customLogin = ()=>{
-        signInWithEmailAndPassword(auth,email,pwd)
-        .then(result =>{
-            setUser(result.user)
-        })
-        .catch(err => console.log(err.message))
+       return signInWithEmailAndPassword(auth,email,pwd) 
     }
     const customSignIn=()=>{
         createUserWithEmailAndPassword(auth,email,pwd)
         .then(result=>{
             updateData()
-            setUser(result.user)
+            history.push('/')
         }).catch(err=>{
             console.log(err.message)
         })
@@ -48,19 +46,15 @@ const useFirebase=()=>{
           });
     }
     const googleSignIn=()=> {
-        signInWithPopup(auth,GoogleProvider)
-        .then(result=>{
-            setUser(result.user)
-        })
-        .catch(err=>{
-            console.log(err.message)
-        })
-
+      return signInWithPopup(auth,GoogleProvider)
     }
     
     const logOut=()=>{
         signOut(auth)
-        .then(()=> console.log('sign out successful.'))
+        .then(()=> {
+            setUser({})
+            console.log('sign out successful.')
+        })
     }
 
 
@@ -73,8 +67,10 @@ const useFirebase=()=>{
         setEmail,
         setImg,
         setPwd,
+        setUser,
         updateData,
-        logOut
+        logOut,
+        auth
     }
 
 }
