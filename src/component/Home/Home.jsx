@@ -1,5 +1,7 @@
 import React from 'react'
 import useServices from '../../hooks/useServices'
+import About from '../About/About'
+import Contact from '../Contact/Contact'
 import Service from '../Service/Service'
 import './Home.css'
 
@@ -31,6 +33,10 @@ const Home = () => {
 
 
             </div>
+            {/* About Section */}
+            <About/>
+            {/* Contact section */}
+            <Contact />
 
             {/* Footer Section  */}
             <div className="row bg-dark pt-5">

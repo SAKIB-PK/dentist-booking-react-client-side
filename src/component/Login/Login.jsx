@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { NavLink, useHistory, useLocation } from 'react-router-dom'
 import useFirebaseContext from '../../context/useFirebaseContext'
 import './Login.css'
 const Login = () => {
     const {googleSignIn,setEmail,setPwd,customLogin}= useFirebaseContext()
+    const [error,setError] = useState('')
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         setEmail(data.email)
@@ -24,7 +25,7 @@ const Login = () => {
         .then(res =>{
             history.push(from)
         })
-        .catch(err => console.log(err.message))
+        .catch(err => console.log(setError(err.message)))
     }
     const gooleLogin=()=>{
         googleSignIn()
@@ -32,7 +33,7 @@ const Login = () => {
             history.push(from)
         })
         .catch(err=>{
-            console.log(err.message)
+            console.log(setError(err.message))
         })
     }
 
@@ -50,6 +51,7 @@ const Login = () => {
                         <div className="form-group mb-3">
                             <input type="password" className="form-control" placeholder="Your Password *" defaultValue=""  {...register("pwd")}/>
                         </div>
+                        <span className="text-danger">{error}</span>
                         <div className="form-group mb-3">
                             <input type="submit" className="btnSubmit" onClick={()=>hundleLogin()} />
                         </div>

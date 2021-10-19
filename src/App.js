@@ -43,9 +43,9 @@ function App() {
             <Route path='/signup'>
               <Registration/>
             </Route>
-            <Route path='/details/:id'>
+            <PrivateRoute path='/details/:id'>
               <ServiceDetail post ={post}/>
-            </Route>
+            </PrivateRoute>
             <Route path='*'>
               <Page404/>
             </Route>

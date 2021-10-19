@@ -21,7 +21,7 @@ const useFirebase=()=>{
     useEffect(() => {
        const subscribe = onAuthStateChanged(auth,user=>setUser(user))
        return ()=>subscribe
-    }, [auth])
+    }, [auth,user])
 
     // create user with email and password
     const customLogin = ()=>{
