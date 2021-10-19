@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './firebase.config';
-function FirebaseAuth(){
+function FirebaseAuthInitialize(){
     initializeApp(firebaseConfig);
 }
-export default FirebaseAuth;
+export default FirebaseAuthInitialize;
