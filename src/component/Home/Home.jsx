@@ -24,11 +24,22 @@ const Home = () => {
                 <div className="row">
                     <h2 className="border-bottom font-monospace fst-italic fw-bold my-5 text-center text-muted text-uppercase">services</h2>
                 </div>
-                <div className="row g-5">
+                <div className="row g-5 mb-5">
                     {
                         post.slice(0,6).map(item => <Service key={item.id} item ={item}/>)
                     }
                 </div>
+
+
+            </div>
+
+            {/* Footer Section  */}
+            <div className="row bg-dark pt-5">
+                <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href="https://www.google.com/" className='text-muted text-decoration-none'>National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+                    <p>&copy; All right Reversed.<a className="text-muted ml-2 text-decoration-none" href="#ss" target="_blank">Dentist Care</a></p>
+                </div>
+                <hr/>
             </div>
         </>
     )
