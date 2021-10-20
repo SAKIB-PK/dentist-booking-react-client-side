@@ -1,0 +1,8 @@
+.navItem a {
+  color: aliceblue;
+  text-align: left;
+  padding-left: 0;
+}
+.navItem a:hover {
+  color: #dc3545;
+}

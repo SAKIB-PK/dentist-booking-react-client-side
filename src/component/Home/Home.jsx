@@ -3,6 +3,7 @@ import useDentist from '../../hooks/useDentist'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
 import Dentist from '../Dentist/Dentist'
+import Footer from '../Footer/Footer'
 import './Home.css'
 
 const Home = () => {
@@ -39,13 +40,7 @@ const Home = () => {
             <Contact />
 
             {/* Footer Section  */}
-            <div className="row bg-dark pt-5">
-                <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                    <p><u><a href="https://www.google.com/" className='text-muted text-decoration-none'>National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-                    <p>&copy; All right Reversed.<a className="text-muted ml-2 text-decoration-none" href="#ss" target="_blank">Dentist Care</a></p>
-                </div>
-                <hr/>
-            </div>
+            <Footer/>
         </>
     )
 }
