@@ -19,8 +19,10 @@ function App() {
   const post = useServices()
   
   return (
+    // context api wrap all the component
     <FirebaseAuth>
       <Router>
+        {/* Navbar is default component */}
         <Navbar/>
         <Switch>
             <Route exact path='/'>
@@ -50,6 +52,7 @@ function App() {
             <PrivateRoute path='/details/:id'>
               <ServiceDetail post ={post}/>
             </PrivateRoute>
+            {/* 404 page show  */}
             <Route path='*'>
               <Page404/>
             </Route>

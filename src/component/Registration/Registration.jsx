@@ -6,6 +6,7 @@ import useFirebaseContext from '../../context/useFirebaseContext'
 const Registration = () => {
     const {setName,setPwd,customSignIn,setImg,setEmail,updateData}= useFirebaseContext()
     const { register, handleSubmit } = useForm();
+    // form value setup state
     const onSubmit = data => {
         setName(data.name)
         setPwd(data.pwd)
@@ -15,13 +16,14 @@ const Registration = () => {
 
     let history = useHistory();
     let location = useLocation();
-
+    // form redirect setting 
     let { from } = location?.state || { from: { pathname: "/" } };
     const hundleSignIn = ()=>{
         customSignIn()
         .then(result =>{
             updateData()
             history.push(from)
+            // site reload setting to get state
             window.location.reload()
         })
         .catch(err => console.log(err.message))
