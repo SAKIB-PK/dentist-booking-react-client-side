@@ -1,12 +1,12 @@
 import React from 'react'
-import useServices from '../../hooks/useServices'
+import useDentist from '../../hooks/useDentist'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
-import Service from '../Service/Service'
+import Dentist from '../Dentist/Dentist'
 import './Home.css'
 
 const Home = () => {
-    const post = useServices()
+    const post = useDentist()
 
     return (
         <>
@@ -27,7 +27,7 @@ const Home = () => {
                 </div>
                 <div className="row g-5 mb-5">
                     {
-                        post.slice(0,6).map(item => <Service key={item.id} item ={item}/>)
+                        post.map(item => <Dentist key={item.id} item ={item}/>)
                     }
                 </div>
 

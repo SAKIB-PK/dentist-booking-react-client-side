@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import About from './component/About/About';
 import Contact from './component/Contact/Contact';
+import DentistDetails from './component/DentistDetails/DentistDetails';
 import Doctor from './component/Doctor/Doctor';
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
@@ -12,11 +13,13 @@ import ServiceDetail from './component/ServiceDetail/ServiceDetail';
 import SpecialMsg from './component/SpecialMsg/SpecialMsg';
 import FirebaseAuth from './context/FirebaseAuth';
 import PrivateRoute from './context/PrivateRoute';
+import useDentist from './hooks/useDentist';
 import useServices from './hooks/useServices';
 
 
 function App() {
   const post = useServices()
+  const service = useDentist()
   
   return (
     // context api wrap all the component
@@ -51,6 +54,9 @@ function App() {
             </Route>
             <PrivateRoute path='/details/:id'>
               <ServiceDetail post ={post}/>
+            </PrivateRoute>
+            <PrivateRoute path='/dentist/:id'>
+              <DentistDetails post ={service}/>
             </PrivateRoute>
             {/* 404 page show  */}
             <Route path='*'>

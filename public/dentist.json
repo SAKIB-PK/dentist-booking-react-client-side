@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Tooth Decay",
+    "price": "6744",
+    "description": "Tooth decay, also known as cavities, is the second only to the common cold as the most prevalent disease in the United States.2﻿ Tooth decay occurs when plaque, the sticky substance that forms on teeth, combines with the sugars and/or starches of the food you eat. This combination produces acids that attack tooth enamel.",
+    "img": "https://www.carltonhousedental.co.uk/wp-content/uploads/2019/09/tooth-decay-blog-300x198.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Gum (Periodontal) Disease",
+    "price": "3452",
+    "description": "Gum disease, also known as periodontal disease, is an infection of the gums surrounding the teeth. It is also one of the main causes of tooth loss among adults. Some studies have indicated that there may be a link between heart disease and periodontal disease.3",
+    "img": "https://images.medicinenet.com/images/article/main_image/gingivitis-1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Oral Cancer",
+    "price": "8755",
+    "description": "Oral cancer is a serious and deadly disease that affects millions of people. The Oral Cancer Foundation estimates that someone in the United States dies every hour from oral cancer, ",
+    "img": "https://assets.cureus.com/uploads/figure/file/237985/lightbox_8c123f40071011ecabe3259c8ba7deeb-tongue-lesion.png"
+  },
+  {
+    "id": 4,
+    "name": "Mouth Sores",
+    "price": "4323",
+    "description": "There are several types of mouth sores and they can be pesky and bothersome. Unless a mouth sore lasts more than two weeks, it is usually nothing to worry about and will disappear on its own.",
+    "img": "https://www.manipalhospitals.com/uploads/blog/blog_3.png"
+  },
+  {
+    "id": 5,
+    "name": "Tooth Erosion",
+    "price": "3452",
+    "description": "Tooth erosion is the loss of tooth structure and is caused by acid attacking the enamel. Tooth erosion signs and symptoms can range from sensitivity to more severe problems such as cracking. ",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dental_erosion_%28hypoestrogenia%29_no211.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Tooth Sensitivity",
+    "price": "6744",
+    "description": "Tooth sensitivity is a common problem that affects millions of people. Basically, tooth sensitivity involves experiencing pain or discomfort to your teeth from sweets, cold air, hot drinks, cold drinks or ice cream.",
+    "img": "https://www.evansondds.com/wp-content/uploads/AdobeStock_40473573-scaled.jpeg"
+  }
+]
