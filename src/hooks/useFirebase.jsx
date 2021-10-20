@@ -1,6 +1,5 @@
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { useEffect, useState } from "react";
-import { useHistory } from 'react-router';
 import FirebaseAuthInitialize from '../firebase/firebase.init';
 
 
@@ -15,7 +14,6 @@ const useFirebase=()=>{
     const [img,setImg] = useState('')
     const GoogleProvider = new GoogleAuthProvider();
     const auth = getAuth()
-    const history = useHistory()
 
     // state memorize user database
     useEffect(() => {
@@ -28,13 +26,8 @@ const useFirebase=()=>{
        return signInWithEmailAndPassword(auth,email,pwd) 
     }
     const customSignIn=()=>{
-        createUserWithEmailAndPassword(auth,email,pwd)
-        .then(result=>{
-            updateData()
-            history.push('/')
-        }).catch(err=>{
-            console.log(err.message)
-        })
+        return createUserWithEmailAndPassword(auth,email,pwd)
+        
     }
     const updateData = ()=>{
         updateProfile(auth.currentUser, {

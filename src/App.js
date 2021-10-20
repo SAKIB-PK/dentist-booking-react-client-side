@@ -9,6 +9,7 @@ import Navbar from './component/Navbar/Navbar';
 import Page404 from './component/page404/Page404';
 import Registration from './component/Registration/Registration';
 import ServiceDetail from './component/ServiceDetail/ServiceDetail';
+import SpecialMsg from './component/SpecialMsg/SpecialMsg';
 import FirebaseAuth from './context/FirebaseAuth';
 import PrivateRoute from './context/PrivateRoute';
 import useServices from './hooks/useServices';
@@ -40,6 +41,9 @@ function App() {
             <Route path='/contact'>
               <Contact />
             </Route>
+            <PrivateRoute path='/special'>
+              <SpecialMsg />
+            </PrivateRoute>
             <Route path='/signup'>
               <Registration/>
             </Route>
