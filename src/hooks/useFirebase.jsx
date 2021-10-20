@@ -17,16 +17,31 @@ const useFirebase=()=>{
 
     // state memorize user database
     useEffect(() => {
-       const subscribe = onAuthStateChanged(auth,user=>setUser(user))
+       const subscribe = onAuthStateChanged(auth,user=>{
+        if(user){
+          setUser(user)
+        }else{
+          setUser({})
+        }
+       })
        return ()=>subscribe
-    }, [auth,user])
+    }, [auth])
 
     // create user with email and password
     const customLogin = ()=>{
        return signInWithEmailAndPassword(auth,email,pwd) 
     }
     const customSignIn=()=>{
-        return createUserWithEmailAndPassword(auth,email,pwd)
+         createUserWithEmailAndPassword(auth,email,pwd)
+        .then(result =>{
+          updateData()
+          const host = window.location.origin
+          window.location.href=host
+          // history.push(from)
+          // site reload setting to get state
+          // window.location.reload()
+      })
+      .catch(err => console.log(err.message))
         
     }
     const updateData = ()=>{

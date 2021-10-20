@@ -13,7 +13,7 @@ const Login = () => {
     }
     let history = useHistory();
     let location = useLocation();
-
+  
     let { from } = location?.state || { from: { pathname: "/" } };
     // let login = () => {
     //     auth.signin(() => {
@@ -62,7 +62,7 @@ const Login = () => {
                     </form>
                     <p className='text-muted text-center'>Or Other Option</p>
                     <div className="mb-3">
-                        <button className='btn btn-primary' onClick={()=>gooleLogin()}>
+                        <button className='btn btn-primary' onClick={gooleLogin}>
                             Google SignIn</button>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { NavLink, useHistory, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import useFirebaseContext from '../../context/useFirebaseContext'
 
 const Registration = () => {
-    const {setName,setPwd,customSignIn,setImg,setEmail,updateData}= useFirebaseContext()
+    const {setName,setPwd,customSignIn,setImg,setEmail}= useFirebaseContext()
     const { register, handleSubmit } = useForm();
     // form value setup state
     const onSubmit = data => {
@@ -12,21 +12,6 @@ const Registration = () => {
         setPwd(data.pwd)
         setImg(data.img)
         setEmail(data.email)
-    }
-
-    let history = useHistory();
-    let location = useLocation();
-    // form redirect setting 
-    let { from } = location?.state || { from: { pathname: "/" } };
-    const hundleSignIn = ()=>{
-        customSignIn()
-        .then(result =>{
-            updateData()
-            history.push(from)
-            // site reload setting to get state
-            window.location.reload()
-        })
-        .catch(err => console.log(err.message))
     }
     return (
         
@@ -48,7 +33,7 @@ const Registration = () => {
                             <input type="password" className="form-control" placeholder="Your Password *" defaultValue="" {...register("pwd")} />
                         </div>
                         <div className="form-group mb-3">
-                            <input type="submit" className="btnSubmit" onClick={()=>hundleSignIn()} />
+                            <input type="submit" className="btnSubmit" onClick={()=>customSignIn()} />
                         </div>
                         <div className="form-group mb-3">
                             <NavLink  className="ForgetPwd" to='/login'>Already have an account.</NavLink>
