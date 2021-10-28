@@ -8,6 +8,7 @@ FirebaseAuthInitialize()
 
 const useFirebase=()=>{
     const [user,setUser] = useState({})
+    const [isLoading,setIsLoading] = useState(true)
     const GoogleProvider = new GoogleAuthProvider();
     const auth = getAuth()
 
@@ -19,6 +20,7 @@ const useFirebase=()=>{
         }else{
           setUser({})
         }
+        setIsLoading(false)
        })
        return ()=>subscribe
     }, [auth])
@@ -48,7 +50,7 @@ const useFirebase=()=>{
           
           }).catch((error) => {
             console.log('Profile Update Unsuccessful.')
-          });
+          })
     }
     const googleSignIn=()=> {
       return signInWithPopup(auth,GoogleProvider)
@@ -65,6 +67,8 @@ const useFirebase=()=>{
 
     return {
         user,
+        setIsLoading,
+        isLoading,
         googleSignIn,
         customSignIn,
         customLogin,

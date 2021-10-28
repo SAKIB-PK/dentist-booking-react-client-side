@@ -4,7 +4,7 @@ import { NavLink, useHistory, useLocation } from 'react-router-dom'
 import useFirebaseContext from '../../context/useFirebaseContext'
 import './Login.css'
 const Login = () => {
-    const {googleSignIn,customLogin,setUser}= useFirebaseContext()
+    const {googleSignIn,customLogin,setUser,setIsLoading}= useFirebaseContext()
     const [error,setError] = useState('')
     // const [email,setEmail] =useState('')
     // const [pwd,setPwd] =useState('')
@@ -17,22 +17,25 @@ const Login = () => {
         const {email,pwd} = data
         customLogin(email,pwd)
         .then(res =>{
+            setIsLoading(true)
             setUser(res.user)
-            console.log(res.user);
             history.push(from)
         })
         .catch(err => console.log(setError(err.message)))
+        .finally(()=>setIsLoading(false))
     }
 
     const gooleLogin=()=>{
         googleSignIn()
         .then(result=>{
+            setIsLoading(true)
             setUser(result.user)
             history.push(from)
         })
         .catch(err=>{
             console.log(setError(err.message))
         })
+        .finally(()=>setIsLoading(false))
     }
 
     

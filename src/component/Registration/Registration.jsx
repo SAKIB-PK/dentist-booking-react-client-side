@@ -4,7 +4,7 @@ import { NavLink, useHistory, useLocation } from 'react-router-dom'
 import useFirebaseContext from '../../context/useFirebaseContext'
 
 const Registration = () => {
-    const {customSignIn,setUser,updateData}= useFirebaseContext()
+    const {customSignIn,setUser,updateData,setIsLoading}= useFirebaseContext()
     // const [email,setEmail] =useState('')
     // const [pwd,setPwd] =useState('')
     const { register, handleSubmit } = useForm();
@@ -17,15 +17,15 @@ const Registration = () => {
         const {name,img,email,pwd}= data
         // setEmail(data.email)
         // setPwd(data.pwd)
-        console.log(email,pwd);
         customSignIn(email,pwd)
         .then(result =>{
+            setIsLoading(true)
             updateData(name,img)
             setUser(result.user)
-            console.log(result)
             history.push(from)
         })
         .catch(err => console.log(err.message))
+        .finally(()=>setIsLoading(false))
     }
     return (
         

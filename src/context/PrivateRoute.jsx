@@ -3,7 +3,10 @@ import { Redirect, Route } from 'react-router'
 import useFirebaseContext from './useFirebaseContext'
 
 const PrivateRoute = ({children,...rest}) => {
-  const {user} = useFirebaseContext()
+  const {user,isLoading} = useFirebaseContext()
+  if(isLoading){
+    return <p>...Loading</p>
+  }
     return (
         <Route
         {...rest}
