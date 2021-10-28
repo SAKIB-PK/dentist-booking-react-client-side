@@ -1,17 +1,31 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory, useLocation } from 'react-router-dom'
 import useFirebaseContext from '../../context/useFirebaseContext'
 
 const Registration = () => {
-    const {setName,setPwd,customSignIn,setImg,setEmail}= useFirebaseContext()
+    const {customSignIn,setUser,updateData}= useFirebaseContext()
+    // const [email,setEmail] =useState('')
+    // const [pwd,setPwd] =useState('')
     const { register, handleSubmit } = useForm();
+    let history = useHistory();
+    let location = useLocation();
+  
+    let { from } = location?.state || { from: { pathname: "/" } };
     // form value setup state
-    const onSubmit = data => {
-        setName(data.name)
-        setPwd(data.pwd)
-        setImg(data.img)
-        setEmail(data.email)
+    const onSubmit = (data) => {
+        const {name,img,email,pwd}= data
+        // setEmail(data.email)
+        // setPwd(data.pwd)
+        console.log(email,pwd);
+        customSignIn(email,pwd)
+        .then(result =>{
+            updateData(name,img)
+            setUser(result.user)
+            console.log(result)
+            history.push(from)
+        })
+        .catch(err => console.log(err.message))
     }
     return (
         
@@ -33,7 +47,7 @@ const Registration = () => {
                             <input type="password" className="form-control" placeholder="Your Password *" defaultValue="" {...register("pwd")} />
                         </div>
                         <div className="form-group mb-3">
-                            <input type="submit" className="btnSubmit" onClick={()=>customSignIn()} />
+                            <input type="submit" className="btnSubmit"/>
                         </div>
                         <div className="form-group mb-3">
                             <NavLink  className="ForgetPwd" to='/login'>Already have an account.</NavLink>

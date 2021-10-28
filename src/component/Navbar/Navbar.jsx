@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import useFirebaseContext from '../../context/useFirebaseContext'
+import './Navbar.css'
 
 const Navbar = () => {
     const {user,logOut}= useFirebaseContext()
@@ -33,6 +34,12 @@ const Navbar = () => {
                 </ul>
                 <ul className="navbar-nav me-2 mb-2 mb-lg-0">
                     {(user?.displayName ||user.email) ? <>
+                       {
+                           user?.photoURL ?
+                           <img src={user.photoURL} alt={user.displayName} className="img-fluid avatar" />
+                           :
+                           <img src='images/avataaars.svg' alt={user.displayName} className="img-fluid avatar" />
+                       } 
                         <span className='text-white px-3 pt-2'>{user.displayName}</span>
                         <button className='btn btn-light fw-bold' onClick={()=> logOut()}>Log out</button>
                         </>

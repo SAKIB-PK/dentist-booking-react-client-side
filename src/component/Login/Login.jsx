@@ -4,32 +4,30 @@ import { NavLink, useHistory, useLocation } from 'react-router-dom'
 import useFirebaseContext from '../../context/useFirebaseContext'
 import './Login.css'
 const Login = () => {
-    const {googleSignIn,setEmail,setPwd,customLogin}= useFirebaseContext()
+    const {googleSignIn,customLogin,setUser}= useFirebaseContext()
     const [error,setError] = useState('')
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => {
-        setEmail(data.email)
-        setPwd(data.pwd)
-    }
+    // const [email,setEmail] =useState('')
+    // const [pwd,setPwd] =useState('')
     let history = useHistory();
     let location = useLocation();
+    const { register, handleSubmit } = useForm();
   
     let { from } = location?.state || { from: { pathname: "/" } };
-    // let login = () => {
-    //     auth.signin(() => {
-    //     history.replace(from);
-    //     });
-    // };
-    const hundleLogin =()=>{
-        customLogin()
+    const onSubmit = data => {
+        const {email,pwd} = data
+        customLogin(email,pwd)
         .then(res =>{
+            setUser(res.user)
+            console.log(res.user);
             history.push(from)
         })
         .catch(err => console.log(setError(err.message)))
     }
+
     const gooleLogin=()=>{
         googleSignIn()
         .then(result=>{
+            setUser(result.user)
             history.push(from)
         })
         .catch(err=>{
@@ -53,7 +51,7 @@ const Login = () => {
                         </div>
                         <span className="text-danger">{error}</span>
                         <div className="form-group mb-3">
-                            <input type="submit" className="btnSubmit" onClick={()=>hundleLogin()} />
+                            <input type="submit" className="btnSubmit" />
                         </div>
                         <div className="form-group mb-3">
                             <NavLink to='/signup' className="ForgetPwd" >Create a new account</NavLink>

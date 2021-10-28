@@ -8,10 +8,6 @@ FirebaseAuthInitialize()
 
 const useFirebase=()=>{
     const [user,setUser] = useState({})
-    const [name,setName] = useState('')
-    const [email,setEmail] = useState('')
-    const [pwd,setPwd] = useState('')
-    const [img,setImg] = useState('')
     const GoogleProvider = new GoogleAuthProvider();
     const auth = getAuth()
 
@@ -28,27 +24,28 @@ const useFirebase=()=>{
     }, [auth])
 
     // create user with email and password
-    const customLogin = ()=>{
+    const customLogin = (email,pwd)=>{
        return signInWithEmailAndPassword(auth,email,pwd) 
     }
-    const customSignIn=()=>{
-         createUserWithEmailAndPassword(auth,email,pwd)
-        .then(result =>{
-          updateData()
-          const host = window.location.origin
-          window.location.href=host
-          // history.push(from)
-          // site reload setting to get state
-          // window.location.reload()
-      })
-      .catch(err => console.log(err.message))
-        
+    const customSignIn=(email,pwd)=>{
+        return createUserWithEmailAndPassword(auth,email,pwd)  
     }
-    const updateData = ()=>{
+    // // logged user info 
+    // const loggedUser = {
+    //   displayName:'',
+    //   email:'',
+    //   photoURL:''
+    // }
+    const updateData = (name,img)=>{
         updateProfile(auth.currentUser, {
-            displayName: name, photoURL: img
-          }).then(() => {
-            console.log('Profile Updated Successfully')
+          displayName:name,
+          photoURL:img
+        })
+        .then(() => {
+          // without reload window show name first time user registration
+          const newUser = {...user,displayName:name,photoURL:img}
+          setUser(newUser)
+          
           }).catch((error) => {
             console.log('Profile Update Unsuccessful.')
           });
@@ -71,14 +68,9 @@ const useFirebase=()=>{
         googleSignIn,
         customSignIn,
         customLogin,
-        setName,
-        setEmail,
-        setImg,
-        setPwd,
         setUser,
         updateData,
         logOut,
-        auth
     }
 
 }
